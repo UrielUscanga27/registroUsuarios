@@ -1,0 +1,37 @@
+<%- include("../header"); %>
+<div class="col-12">
+    <!--Tabla donde se mestran los Usuarios-->
+    <h1>Usuarios</h1>
+    <a href="/productos/agregar" class="btn btn-primary mb-2">Agregar</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nombre de Usuario</th>
+                <th>Contraseña</th>
+                <th>Roles</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% productos.forEach(producto => { %>
+            <tr>
+                <td><%= producto.nombre %></td>
+                <td><%= producto.password %></td>
+                <td><%= producto.admin %></td>
+                <td>
+                    <a href="/productos/editar/<%= producto.id %>" class="btn btn-info">
+                        Editar
+                    </a>
+                </td>
+                <td>
+                    <a href="/productos/eliminar/<%= producto.id %>" class="btn btn-danger">
+                        Eliminar
+                    </a>
+                </td>
+            </tr>
+            <% })%>
+        </tbody>
+    </table>
+</div>
+<%- include("../footer"); %>

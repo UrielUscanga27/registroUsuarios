@@ -1,0 +1,32 @@
+<%- include("../header"); %>
+<div class="col-12">
+    <h1>Agregar Usuarios</h1>
+    <form method="post" action="/productos/insertar">
+        <div class="form-group">
+            <label for="nombre">Nombre de Usuario</label>
+            <input required id="nombre" placeholder="Nombre del usuario" class="form-control" type="text"
+                name="nombre">
+        </div>
+        <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input required id="password" placeholder="Contraseña del usuario" maxlength="12" title="contraseña" class="form-control" type="password"
+                name="password">
+        </div>
+
+        <div class="form-group">
+            <label for="Rol del usuario">Administrador</label>
+            <input required id="admin" placeholder="Rol de usuario 1 , 0" max="1"  min="0" maxlength="1" class="form-control" type="Number"
+                name="admin">
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-success">Guardar</button>
+            &nbsp;<a href="/productos" class="btn btn-primary">Volver</a>
+        </div>
+        
+
+
+
+    </form>
+</div>
+<%- include("../footer"); %>
